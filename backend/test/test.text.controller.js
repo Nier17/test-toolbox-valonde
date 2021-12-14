@@ -1,28 +1,53 @@
 const assert = require("chai").assert;
+const chai = require("chai");
+const chaiHttp = require("chai-http");
+const expect = require("chai").expect;
 const textController = require("../controllers/text.controller");
-// import "isomorphic-fetch";
+chai.use(chaiHttp);
 
-// describe("textController", function () {
-//   console.log("asads");
-//   // var myBlob = new Blob();
-//   // var init = { status: 200, statusText: "SuperSmashingGreat!" };
-//   // var myResponse = new Response(myBlob, init);
-//   var res = new Response();
+const url = "http://localhost:3001";
 
-//   console.log(res);
-//   it("app should return hello", function () {
-//     assert.equal(
-//       textController.getInvertedText({ query: { text: "hola" } }, res),
-//       "aloh"
-//     );
-//   });
-// });
+describe("get json object: ", () => {
+  it("should obtain json body from response", (done) => {
+    chai
+      .request(url)
+      .get("/iecho?text=hola")
+      .end(function (err, res) {
+        console.log(res.body);
+        expect(res).to.have.status(200);
+        done();
+      });
+  });
+});
 
-describe("getInverted", function () {
-  it("should return inverted", function () {
+describe("bad request status 400: ", () => {
+  it("since there is not text, should be bad request and status 400", (done) => {
+    chai
+      .request(url)
+      .get("/iecho?text=")
+      .end(function (err, res) {
+        console.log(res.body);
+        expect(res).to.have.status(400);
+        done();
+      });
+  });
+});
+
+describe("getInvertedCase1", function () {
+  it("should return inverted. It is not a palindrome", function () {
     assert.deepEqual(textController.getInverted("hola"), {
       text: "aloh",
       palindrome: false,
     });
+  });
+  it("should be palindrome true", function () {
+    assert.deepEqual(textController.getInverted("aaa"), {
+      text: "aaa",
+      palindrome: true,
+    });
+  });
+  it("should return an object", function () {
+    let inverted = textController.getInverted("aaa");
+    assert.typeOf(inverted, "object");
   });
 });
