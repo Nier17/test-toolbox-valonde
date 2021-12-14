@@ -1,16 +1,16 @@
-const express = require('express')
-const app = express()
-const cors = require('cors')
+const express = require("express");
+const app = express();
+const cors = require("cors");
 
 // Settings
-app.set('port', process.env.PORT || 3001)
+app.set("port", process.env.PORT || 3001);
 
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 // Routes
-app.use('/', require('./routes/text.routes'))
+app.use("/", require("./routes/text.routes"));
 
 // Start server
-app.listen(app.get('port'), () => {
-  console.log('"Server on port', app.get('port'))
-})
+app.listen(app.get("port"), () => {
+  console.log('"Server on port', app.get("port"));
+});
