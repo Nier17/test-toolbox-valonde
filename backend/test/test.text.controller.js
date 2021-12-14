@@ -3,6 +3,10 @@ const chai = require("chai");
 const chaiHttp = require("chai-http");
 const expect = require("chai").expect;
 const textController = require("../controllers/text.controller");
+const request = require("supertest");
+const express = require("express");
+
+const app = express();
 chai.use(chaiHttp);
 
 const url = "http://localhost:3001";
@@ -49,5 +53,26 @@ describe("getInvertedCase1", function () {
   it("should return an object", function () {
     let inverted = textController.getInverted("aaa");
     assert.typeOf(inverted, "object");
+  });
+});
+
+////TESTS WITH SUPERTEST
+describe(" GET /iecho with hola text", function () {
+  it("supertest good parameters status 200 /iecho with some text", function (done) {
+    request(url)
+      .get("/iecho?text=hola")
+      .set("Accept", "application/json")
+      .expect("Content-Type", /json/)
+      .expect(200, done);
+  });
+});
+
+describe("GET /iecho with hola text", function () {
+  it("supertest bad parameters status 400 /iecho", function (done) {
+    request(url)
+      .get("/iecho?text")
+      .set("Accept", "application/json")
+      .expect("Content-Type", /json/)
+      .expect(400, done);
   });
 });
