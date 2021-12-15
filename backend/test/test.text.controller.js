@@ -4,9 +4,7 @@ const chaiHttp = require("chai-http");
 const expect = require("chai").expect;
 const textController = require("../controllers/text.controller");
 const request = require("supertest");
-const express = require("express");
 
-const app = express();
 chai.use(chaiHttp);
 
 const url = "http://localhost:3001";

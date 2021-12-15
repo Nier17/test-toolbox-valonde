@@ -11,8 +11,6 @@ textController.getInverted = (text) => {
 };
 
 textController.getInvertedText = (req, res) => {
-  //   console.log(req.query);
-  //   console.log(res);
   if (req.query.text) {
     // option 1
     const inverted = textController.getInverted(req.query.text);
