@@ -11,13 +11,14 @@ export const bgTertiary = "#C15162";
 
 export const white = "#FFFFFF";
 
-export const gray1 = "#2D2D2F";
-export const gray2 = "#656568";
-export const gray3 = "#97979B";
-export const gray4 = "#ADADAD";
-export const gray5 = "#C8C8CB";
-export const gray6 = "#EEEEEE";
-export const gray7 = "#F8F8F8";
+export const gray1 = "#E5E5E5";
+// export const gray1 = "#2D2D2F";
+// export const gray2 = "#656568";
+// export const gray3 = "#97979B";
+// export const gray4 = "#ADADAD";
+// export const gray5 = "#C8C8CB";
+// export const gray6 = "#EEEEEE";
+// export const gray7 = "#F8F8F8";
 
 export const H1 = "2.441rem";
 export const H2 = "1.953rem";
