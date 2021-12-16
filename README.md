@@ -22,13 +22,13 @@ Git Bash (Git)
 
 7. Run "npm install" and after finish it, run "npm run start". Now the frontend should be running too!
 
-8. Go to `http://localhost:3000/` and test it!
+8. Go to `http://localhost:8080/` and test it!
 
 9. To run the frontend tests, open a new terminal, go to the frontend folder, and run "npm run test"
 
 You can see the GitHub repository here: https://github.com/Nier17/test-toolbox-valonde
 
-The backend is running `http://localhost:3001/` and the frontend in `http://localhost:3000/`
+The backend is running `http://localhost:3001/` and the frontend in `http://localhost:8080/`
 
 # Frontend
 
