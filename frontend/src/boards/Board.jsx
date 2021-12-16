@@ -6,9 +6,9 @@ import Input from "../components/Input";
 const Board = () => {
   return (
     <div>
-      <Navbar children={<Input></Input>}></Navbar>
+      <Navbar children={<Input text={"Insert text"}></Input>}></Navbar>
 
-      <Bag title={"Results"}></Bag>
+      <Bag title={"Results:"}></Bag>
     </div>
   );
 };

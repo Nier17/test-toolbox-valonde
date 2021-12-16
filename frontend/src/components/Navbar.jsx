@@ -1,12 +1,14 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { bgPrimary, bgSecondary } from "../globalStyles";
-import Input from "./Input";
-
+import Button from "./Button";
 const Navbar = ({ color, children }) => {
   return (
     <Container color={color}>
-      <InputContainer>{children}</InputContainer>
+      <InputContainer>
+        {children}
+        {children && <Button text={"Send"}></Button>}
+      </InputContainer>
     </Container>
   );
 };
@@ -31,10 +33,16 @@ const Container = styled.div`
 `;
 
 const InputContainer = styled.div`
-  width: 40%;
+  /* width: 56%; */
+  width: 1000px;
   display: flex;
   margin: 0 auto;
   padding-top: 20px;
+  justify-content: space-evenly;
+  @media (max-width: 900px) {
+    width: 500px;
+    justify-content: space-between;
+  }
 `;
 
 export default Navbar;
