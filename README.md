@@ -16,11 +16,15 @@ Git Bash (Git)
 
 4. Run the command npm install. After this, you can run the server with the command "node index.js" or using nodemon with "npx nodemon".
 
-5. Open a new terminal, and go to the "frontend" directory
+5. To run the tests for the backend, open a new terminal, go to the backend folder and run "npm run test"
 
-6. Run "npm install" and after finish it, run "npm run start". Now the frontend should be running too!
+6. Open a new terminal, and go to the "frontend" directory
 
-7. Go to `http://localhost:3000/` and test it!
+7. Run "npm install" and after finish it, run "npm run start". Now the frontend should be running too!
+
+8. Go to `http://localhost:3000/` and test it!
+
+9. To run the frontend tests, open a new terminal, go to the frontend folder, and run "npm run test"
 
 You can see the GitHub repository here: https://github.com/Nier17/test-toolbox-valonde
 
@@ -37,17 +41,31 @@ Project generated using NodeJS.
 ## Technologies
 
 React
+
 NodeJS
+
 Express
+
 Mocha
+
 Chai
+
 Chai-http
+
 Standard
+
 Supertest
 
 Styled-components
+
+Bootstrap
+
 React-bootstrap
+
 Axios
+
 Jest
+
 Webpack
+
 React testing library
