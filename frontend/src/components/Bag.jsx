@@ -6,6 +6,7 @@ const Bag = ({ title, children }) => {
   return (
     <Container>
       <TitleLabel>{title}</TitleLabel>
+      <ChildrenContainer>{children}</ChildrenContainer>
     </Container>
   );
 };
@@ -22,6 +23,11 @@ const TitleLabel = styled.div`
   padding: 36px 0px 0px 28px;
   font-size: 30px;
   font-weight: bold;
+`;
+
+const ChildrenContainer = styled.div`
+  width: 600px;
+  margin: 0 auto;
 `;
 
 export default Bag;

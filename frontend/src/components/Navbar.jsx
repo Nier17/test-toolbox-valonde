@@ -1,13 +1,14 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { bgPrimary, bgSecondary } from "../globalStyles";
-import Button from "./Button";
-const Navbar = ({ color, children }) => {
+// import Button from "./Button";
+const Navbar = ({ color, children, children2 }) => {
   return (
     <Container color={color}>
       <InputContainer>
         {children}
-        {children && <Button text={"Send"}></Button>}
+        {children2}
+        {/* {children && <Button text={"Send"}></Button>} */}
       </InputContainer>
     </Container>
   );
