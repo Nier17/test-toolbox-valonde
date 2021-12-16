@@ -1,9 +1,14 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { bgPrimary, bgSecondary } from "../globalStyles";
+import Input from "./Input";
 
-const Navbar = ({ color }) => {
-  return <Container color={color}></Container>;
+const Navbar = ({ color, children }) => {
+  return (
+    <Container color={color}>
+      <InputContainer>{children}</InputContainer>
+    </Container>
+  );
 };
 
 Navbar.defaultProps = {
@@ -23,6 +28,13 @@ const Container = styled.div`
         background-color: ${bgSecondary};
       `;
   }};
+`;
+
+const InputContainer = styled.div`
+  width: 40%;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 20px;
 `;
 
 export default Navbar;

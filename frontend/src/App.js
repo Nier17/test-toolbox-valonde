@@ -1,15 +1,20 @@
 import React from "react";
-import Navbar from "./components/Navbar";
 import styled from "styled-components";
 import { gray1 } from "./globalStyles";
-import Bag from "./components/Bag";
+import Board from "./boards/Board";
+import Input from "./components/Input";
+import Form from "react-bootstrap/Form";
+
 import "./App.css";
 
 export default function App() {
   return (
     <div>
-      <Navbar>hola</Navbar>
-      <Bag title={"Results"}></Bag>
+      <Board></Board>
+
+      {/* <Input></Input> */}
+      {/* <Navbar>hola</Navbar>
+      <Bag title={"Results"}></Bag> */}
     </div>
   );
 }
