@@ -44,6 +44,10 @@ const InputContainer = styled.div`
     width: 500px;
     justify-content: space-between;
   }
+  @media (max-width: 600px) {
+    width: 360px;
+    justify-content: space-between;
+  }
 `;
 
 export default Navbar;

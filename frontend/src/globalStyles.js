@@ -12,7 +12,7 @@ export const bgTertiary = "#C15162";
 export const white = "#FFFFFF";
 
 export const gray1 = "#E5E5E5";
-// export const gray1 = "#2D2D2F";
+export const gray2 = "#C8C8C8";
 // export const gray2 = "#656568";
 // export const gray3 = "#97979B";
 // export const gray4 = "#ADADAD";

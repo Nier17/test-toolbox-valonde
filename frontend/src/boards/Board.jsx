@@ -23,6 +23,7 @@ const Board = () => {
       //   setData(newArray);
       setData((draft) => {
         draft.push(res.data);
+        draft.reverse();
       });
 
       //   setTest(test + 1);
@@ -49,6 +50,7 @@ const Board = () => {
         children={data.map((e, index) => (
           <Card key={index} text={e.text} palindrome={e.palindrome}></Card>
         ))}
+        numberElements={data.length}
         //   children={<Card></Card>}
       ></Bag>
     </div>
