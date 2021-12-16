@@ -18,17 +18,10 @@ const Board = () => {
   function getData() {
     var newUrl = url + searchText;
     axios.get(newUrl).then((res) => {
-      //   var newArray = data;
-      //   newArray.push(res.data);
-      //   setData(newArray);
       setData((draft) => {
         draft.push(res.data);
         draft.reverse();
       });
-
-      //   setTest(test + 1);
-      console.log(data);
-      console.log(searchText);
     });
   }
   useEffect(() => {}, [data]);
@@ -37,7 +30,7 @@ const Board = () => {
       <Navbar
         children={
           <Input
-            text={"Insert text"}
+            placeholder={"Insert text"}
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           ></Input>
@@ -51,7 +44,6 @@ const Board = () => {
           <Card key={index} text={e.text} palindrome={e.palindrome}></Card>
         ))}
         numberElements={data.length}
-        //   children={<Card></Card>}
       ></Bag>
     </div>
   );

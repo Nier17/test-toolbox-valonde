@@ -19,12 +19,9 @@ Bag.defaultProps = {
 
 const Container = styled.div`
   width: 70%;
-  /* height: 600px; */
-  /* margin: 40px 0px 0px 300px; */
   margin: 2% 16% 2% 16%;
   padding-bottom: 40px;
 
-  /* padding-bottom: 500px; */
   background-color: ${white};
   ${(props) => {
     if (props.numberElements > 5) {

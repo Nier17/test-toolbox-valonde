@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Form from "react-bootstrap/Form";
 
-const Input = ({ placeholder, text, type, value, onChange }) => {
+const Input = ({ placeholder, value, onChange }) => {
   return (
     <Container>
       <>
         <Form.Control
           type="text"
-          placeholder={text}
+          placeholder={placeholder}
           value={value}
           onChange={onChange}
         />

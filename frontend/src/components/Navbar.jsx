@@ -1,14 +1,12 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { bgPrimary, bgSecondary } from "../globalStyles";
-// import Button from "./Button";
 const Navbar = ({ color, children, children2 }) => {
   return (
     <Container color={color}>
       <InputContainer>
         {children}
         {children2}
-        {/* {children && <Button text={"Send"}></Button>} */}
       </InputContainer>
     </Container>
   );
@@ -34,7 +32,6 @@ const Container = styled.div`
 `;
 
 const InputContainer = styled.div`
-  /* width: 56%; */
   width: 1000px;
   display: flex;
   margin: 0 auto;

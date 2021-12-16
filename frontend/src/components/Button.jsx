@@ -17,12 +17,9 @@ const StyledButton = styled(BootstrapButton)`
   background-color: ${bgSecondary};
   padding-left: 40px;
   padding-right: 40px;
-
-  /* width: 100px; */
 `;
 
 const Container = styled.div`
-  /* width: 1px; */
 `;
 
 export default Button;
