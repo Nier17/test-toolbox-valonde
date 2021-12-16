@@ -1,6 +1,6 @@
-import React from "react";
-import styled, { css } from "styled-components";
-import { bgPrimary, bgSecondary } from "../globalStyles";
+import React from 'react'
+import styled, { css } from 'styled-components'
+import { bgPrimary, bgSecondary } from '../globalStyles'
 const Navbar = ({ color, children, children2 }) => {
   return (
     <Container color={color}>
@@ -9,27 +9,28 @@ const Navbar = ({ color, children, children2 }) => {
         {children2}
       </InputContainer>
     </Container>
-  );
-};
+  )
+}
 
 Navbar.defaultProps = {
-  color: "primary",
-};
+  color: 'primary'
+}
 
 const Container = styled.div`
   width: 100%;
   height: 100px;
   ${(props) => {
-    if (props.color === "primary")
-      return css`
+    if (props.color === 'primary') {
+ return css`
         background-color: ${bgPrimary};
-      `;
-    else if (props.color === "secondary")
-      return css`
+      `
+} else if (props.color === 'secondary') {
+ return css`
         background-color: ${bgSecondary};
-      `;
+      `
+}
   }};
-`;
+`
 
 const InputContainer = styled.div`
   width: 1000px;
@@ -45,6 +46,6 @@ const InputContainer = styled.div`
     width: 360px;
     justify-content: space-between;
   }
-`;
+`
 
-export default Navbar;
+export default Navbar

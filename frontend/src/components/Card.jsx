@@ -1,7 +1,7 @@
-import React from "react";
-import BootstrapCard from "react-bootstrap/Card";
-import styled from "styled-components";
-import { gray2 } from "../globalStyles";
+import React from 'react'
+import BootstrapCard from 'react-bootstrap/Card'
+import styled from 'styled-components'
+import { gray2 } from '../globalStyles'
 
 const Card = ({ text, palindrome }) => {
   return (
@@ -17,15 +17,15 @@ const Card = ({ text, palindrome }) => {
         </ContainerBody>
       </StyledCard>
     </Container>
-  );
-};
+  )
+}
 const Container = styled.div`
   margin: 20px;
-`;
+`
 const ContainerBody = styled.div`
   display: flex;
   justify-content: space-around;
-`;
+`
 
 const Label = styled.div`
   width: 250px;
@@ -35,7 +35,7 @@ const Label = styled.div`
   @media (max-width: 600px) {
     width: 100px;
   }
-`;
+`
 
 const StyledCard = styled(BootstrapCard)`
   width: 600px;
@@ -47,5 +47,5 @@ const StyledCard = styled(BootstrapCard)`
   @media (max-width: 600px) {
     width: 300px;
   }
-`;
-export default Card;
+`
+export default Card
